@@ -114,4 +114,8 @@ The model follows a **deep U-Net design** with 6 encoding and decoding levels. E
 | field        | 0.8239       | 0.7070     | 0.8328         | 0.8239     | 0.8283       |
 
 
-**Examples**
+**Predicted tile examples**
+
+![image](https://github.com/user-attachments/assets/55d042f1-c93a-4c3b-8505-c190003e3993)
+
+
