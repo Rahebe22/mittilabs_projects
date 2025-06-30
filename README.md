@@ -65,6 +65,29 @@ The model follows a **deep U-Net design** with 6 encoding and decoding levels. E
 
  ### Training results
 
+![image](https://github.com/user-attachments/assets/80d95006-3994-47d4-b852-b8ccf5c6ef12)
+
+**Overall Evaluation Metrics**
+
+| **Metric**         | **Value**   |
+|--------------------|-------------|
+| Overall Accuracy   | 0.8114      |
+| Mean Accuracy      | 0.8074      |
+| Mean IoU           | 0.6792      |
+| Mean Precision     | 0.8100      |
+| Mean Recall        | 0.8074      |
+| Mean F1 Score      | 0.8084      |
+
+
+**Per-Class Evaluation Metrics**
+
+| **Class**    | **Accuracy** | **IoU**  | **Precision** | **Recall** | **F1 Score** |
+|--------------|--------------|----------|----------------|------------|--------------|
+| non-field    | 0.7697       | 0.6454   | 0.7998         | 0.7697     | 0.7845       |
+| field        | 0.8450       | 0.7129   | 0.8202         | 0.8450     | 0.8324       |
+
+
+
 
 
  ### Prediction performance
