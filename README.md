@@ -41,7 +41,7 @@ The model follows a **deep U-Net design** with 6 encoding and decoding levels. E
 - **Loss function**: `LocallyWeightedTverskyFocalLoss()`
 - **Optimizer**: `Sharpness-Aware Minimization (SAM)`
 - **Initial Learning Rate**: `0.01` with `StepLR` scheduler
-- **Epochs**: 80  
+- **Epochs**: 80 (early stopping triggered epoch 29)
 - **Batch size**: 32 (training), 10 (validation)
 - **Early stopping**: patience of 10 epochs with `min_delta=0.001`
 - **Warm-up period**: 10 epochs
@@ -61,3 +61,10 @@ The model follows a **deep U-Net design** with 6 encoding and decoding levels. E
 
 - **Wigth initialization**:
   - All model parameters are initialized using **Kaiming initialization**.
+
+
+ ### Training results
+
+
+
+ ### Prediction performance
