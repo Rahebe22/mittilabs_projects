@@ -131,10 +131,6 @@ Train_Validate:
   early_stopping_patience: 100
   warmup_period: 10
 
-
-
-## Results
-
 ---
 
 ## Results
@@ -163,14 +159,12 @@ Train_Validate:
 ---
 
 ### Normalized Confusion Matrix
-![Confusion Matrix](finetune_metrics.png)
-
+<img width="1789" height="1866" alt="finetune_metrics" src="https://github.com/user-attachments/assets/76aeda19-f9f3-435a-8a4a-bff415add789" />
 ---
 
 ### Training & Validation Loss
 | Training Loss Curve | Validation Loss Curve |
 |---------------------|-----------------------|
-| ![Train Loss](Loss_train_loss.png) | ![Val Loss](Loss_val_loss.png) |
 
 ---
 
