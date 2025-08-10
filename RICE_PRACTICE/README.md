@@ -130,7 +130,7 @@ Train_Validate:
 
   early_stopping_patience: 100
   warmup_period: 10
-
+```
 ---
 
 ## Results
@@ -159,7 +159,7 @@ Train_Validate:
 ---
 
 ### Normalized Confusion Matrix
-
+<img width="1789" height="1866" alt="finetune_metrics" src="https://github.com/user-attachments/assets/dafc8bf2-669d-4102-b10e-da8f65598279" />
 ---
 
 ### Training & Validation Loss
