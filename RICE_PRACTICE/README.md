@@ -58,7 +58,7 @@ Trained a **5-class semantic segmentation model**:
 
 ## Loss: Locally-Weighted Tversky-Focal (with ignore masking)
 
-To Directly addresses **extreme class imbalance** and focuses on **hard errors**.
+To directly address **extreme class imbalance** and focus on **hard errors**.
 
 - **Per-batch class weights:** Inverse frequency of present (non-ignored) labels, normalized.  
 - Absent classes in a batch get a small floor weight (`1e-5`) to avoid NaNs.  
