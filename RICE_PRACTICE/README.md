@@ -159,7 +159,7 @@ Train_Validate:
 ---
 
 ### Normalized Confusion Matrix
-<img width="1789" height="1866" alt="finetune_metrics" src="https://github.com/user-attachments/assets/76aeda19-f9f3-435a-8a4a-bff415add789" />
+
 ---
 
 ### Training & Validation Loss
