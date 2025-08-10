@@ -1,13 +1,3 @@
-tb added 
-google embedding downloader
-model
-
-data part
-geojson files
-bboxes of study area
-
-
-
 # Rice-Field Segmentation (Sentinel-1) — Preprocessing & Training Notes
 
 ## Classes
