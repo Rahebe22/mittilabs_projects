@@ -130,3 +130,67 @@ Train_Validate:
 
   early_stopping_patience: 100
   warmup_period: 10
+
+
+
+## Results
+
+---
+
+## Results
+
+### Overall Metrics
+| Metric           | Value   |
+|------------------|---------|
+| Overall Accuracy | 0.4955  |
+| Mean Accuracy    | 0.3078  |
+| Mean IoU         | 0.1170  |
+| Mean Precision   | 0.2146  |
+| Mean Recall      | 0.3078  |
+| Mean F1 Score    | 0.1671  |
+
+---
+
+### Class-wise Metrics
+| Class                  | Accuracy | IoU     | Precision | Recall  | F1 Score |
+|------------------------|----------|---------|-----------|---------|----------|
+| non-field              | 0.5031   | 0.4969  | 0.9756    | 0.5031  | 0.6639   |
+| dry                    | 0.4380   | 0.0212  | 0.0218    | 0.4380  | 0.0416   |
+| flooded                | 0.0114   | 0.0035  | 0.0050    | 0.0114  | 0.0070   |
+| saturated with water   | 0.1098   | 0.0226  | 0.0276    | 0.1098  | 0.0441   |
+| saturated without water| 0.4768   | 0.0410  | 0.0430    | 0.4768  | 0.0789   |
+
+---
+
+### Normalized Confusion Matrix
+![Confusion Matrix](finetune_metrics.png)
+
+---
+
+### Training & Validation Loss
+| Training Loss Curve | Validation Loss Curve |
+|---------------------|-----------------------|
+| ![Train Loss](Loss_train_loss.png) | ![Val Loss](Loss_val_loss.png) |
+
+---
+
+## Discussion
+
+- **Overall Accuracy** reached ~49.55%, but the **Mean IoU** is low (0.117), reflecting challenges with minority classes.
+- **Class 0 (non-field)** dominates performance due to class imbalance — achieving high precision (0.9756) and F1 score (0.6639).
+- Minority classes (dry, flooded, saturated with/without water) show **low IoU and F1 scores**, suggesting further improvement is needed in recall and precision for these classes.
+- The **confusion matrix** indicates:
+  - Significant misclassification of flooded and saturated classes into *non-field* or *saturated without water*.
+  - Dry is often confused with *saturated without water*.
+- Loss curves suggest the model is learning but may be **plateauing early**, possibly due to label imbalance and noise.
+
+---
+
+## Next Steps
+- Adding google embeddings as input
+- Enhance **minority class representation** via targeted sampling or synthetic augmentation.
+- Experiment with **multi-stage training** — first focusing on separating field vs. non-field, then sub-class segmentation.
+- Explore **loss re-weighting** or **focal variants** with higher emphasis on flooded/saturated classes.
+- Consider **temporal features** or multi-date stacks for better water-related class discrimination.
+
+---
