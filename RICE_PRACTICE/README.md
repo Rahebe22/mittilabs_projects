@@ -152,8 +152,9 @@ Train_Validate:
 ---
 
 ### Training & Validation Loss
-| Training Loss Curve | Validation Loss Curve |
-|---------------------|-----------------------|
+
+<img width="587" height="427" alt="Screenshot 2025-08-10 at 6 08 07 PM" src="https://github.com/user-attachments/assets/03db98c0-5bca-43df-80f9-c0e94496073b" />
+
 
 ---
 
