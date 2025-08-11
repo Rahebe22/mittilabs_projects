@@ -33,6 +33,7 @@ Trained a **5-class semantic segmentation model**:
 
 ### NoData handling
 - Any `NaN`/`Inf` in inputs is replaced with `-9999` and treated as NoData.
+- Sentinel 1 images have been chipped into 224 by 224 images with 3 bands of VV, VH, and incident angle for the corresponding partial labels.
 
 ### Normalization
 - **Per-band, per-tile min–max**  
@@ -41,6 +42,11 @@ Trained a **5-class semantic segmentation model**:
 
 ### Spatial consistency
 - Train/validate/test chips: **224×224** pixels.  
+
+### An example pair of S1 image and partial label chips
+
+<img width="2389" height="3389" alt="sample_chips" src="https://github.com/user-attachments/assets/2a6ae4dc-58d7-48c4-a8b0-b3da4376df2c" />
+
 
 
 ---
@@ -54,18 +60,6 @@ To directly address **extreme class imbalance** and focus on **hard errors**.
 - **Ignore mask:** `ignore_index = -100`  
   - A binary valid mask is built from integer labels.  
   - Predictions and one-hot targets are multiplied by it so ignored pixels contribute **zero** to TP/FP/FN.
-
-**Formula:**
-\[
-TI = \frac{TP + \text{smooth}}{TP + \alpha FN + \beta FP + \text{smooth}}
-\]
-\[
-L = (1 - TI)^\gamma
-\]
-where:  
-- \(\alpha = 0.7\)  
-- \(\beta = 0.3\)  
-- \(\gamma = 1.33\)
 
 - Denominators are clamped and a small ε is added for stability.
 
